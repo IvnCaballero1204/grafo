@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Actividad_4.dir/main.cpp.o CMakeFiles/Actividad_4.dir/grafo.cpp.o  -o Actividad_4 
