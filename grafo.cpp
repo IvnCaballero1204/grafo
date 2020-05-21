@@ -44,16 +44,12 @@ void Vertice::eliminaArista(Arista* elemento) {
             return;
         }
 
-        else {
-            ///SI NO ES LA ÚLTIMA ARISTA, HACEMOS EL REDIRECCIONAMIENTO DE LOS PUNTEROS
-            if(elemento->getSig() != nullptr)
-                aristaAnterior->setSig(elemento->getSig());
-        }
+        else
+            aristaAnterior->setSig(elemento->getSig());
     }
 
     /// 1. YA UNA VEZ HECHO LOS CAMBIOS SE ELIMINA LA ARISTA.
     /// 2. EN DADO CASO QUÉ SOLO TUVIERA UNA ARISTA, NO SE HACE NINGÚN CAMBIO Y SOLO SE ELIMINA.
-    /// 3. EN DADO CASO QUÉ FUESE LA ÚLTIMA ARISTA, NO SE HACE NINGÚN CAMBIO Y SOLO SE ELIMINA.
     delete elemento;
     contAristas--;
 }

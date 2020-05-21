@@ -1,3 +1,3 @@
-/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/Actividad 4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/Actividad 4/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/Actividad 4/cmake-build-debug/CMakeFiles/Actividad_4.dir
+/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/grafo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/grafo/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/grafo/cmake-build-debug/CMakeFiles/Actividad_4.dir

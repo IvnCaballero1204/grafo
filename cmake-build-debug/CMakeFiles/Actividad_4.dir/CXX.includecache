@@ -6,19 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/Actividad 4/grafo.h
+/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/grafo/grafo.cpp
+grafo.h
+/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/grafo/grafo.h
+
+/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/grafo/grafo.h
 iostream
 -
 sstream
 -
 string
 -
-
-/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/Actividad 4/main.cpp
-iostream
--
-fstream
--
-grafo.h
-/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/Actividad 4/grafo.h
 
