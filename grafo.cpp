@@ -32,6 +32,8 @@ void Vertice::eliminaArista(Arista* elemento) {
         ///SI TIENE MÁS DE UNA ARISTA HACEMOS EL CAMBIO DE LA PRIMERA ARISTA HACIA LA SIGUIENTE ARISTA
         if(contAristas != 1)
             primerArista = primerArista->getSig();
+        else
+            primerArista = nullptr;
     }
 
     ///SI NO ES LA PRIMERA ARISTA
@@ -201,46 +203,48 @@ void Grafo::insertaArista(Vertice* v1, Vertice* v2) {
 
 void Grafo::eliminaVertice(Vertice *elemento) {
 
-    if(elemento == primerVertice){
-        if(contVertices != 1)
-            primerVertice = primerVertice->getSig();
+    Vertice* verticeAnterior = anterior(elemento);
+
+    if(!verticeAnterior) {
+        std::cout << "NO EXISTE VERTICE" << std::endl;
+        return;
     }
 
-    else{
-        Vertice* verticeAnterior = anterior(elemento);
+    else {
+        int numeroAristas = elemento->getContador(), i = 0;
 
-        if(!verticeAnterior)
-            std::cout << "NO EXISTE VERTICE" << std::endl;
+        ///ELIMINA TODAS LAS ARISTAS DE ESTE VERTICE
+        while(i < numeroAristas){
+            int j = 0;
+            Arista *aAux = elemento->recupera(j);
+            elemento->eliminaArista(aAux);
+            i++;
+        }
 
-        else {
-            int numeroAristas = elemento->getContador(), i = 0;
+        int numeroVertices = contVertices;
+        i = 0;
 
-            ///ELIMINA TODAS LAS ARISTAS DE ESTE VERTICE
-            while(i < numeroAristas){
-                int j = 0;
-                Arista *aAux = elemento->recupera(j);
-                elemento->eliminaArista(aAux);
-                i++;
+        ///ELIMINA SU CONEXIÓN HACIA OTROS VERTICES EN DADO CASO DE QUE ÉSTE SEA UNA ARISTA DE ALGUNO
+        while(i < numeroVertices){
+            Vertice *vAux = recupera(i);
+
+            if(vAux->buscaArista(elemento)){
+                Arista *aAux = vAux->buscaArista(elemento);
+                vAux->eliminaArista(aAux);
             }
+            i++;
+        }
 
-            int numeroVertices = contVertices;
-            i = 0;
+        verticeAnterior->setSig(elemento->getSig());
 
-            ///ELIMINA SU CONEXIÓN HACIA OTROS VERTICES EN DADO CASO DE QUE ÉSTE SEA UNA ARISTA DE ALGUNO
-            while(i < numeroVertices){
-                Vertice *vAux = recupera(i);
-
-                if(vAux->buscaArista(elemento)){
-                    Arista *aAux = vAux->buscaArista(elemento);
-                    vAux->eliminaArista(aAux);
-                }
-                i++;
-            }
-
-            if(elemento->getSig() != nullptr)
-                verticeAnterior->setSig(elemento->getSig());
+        if(elemento == primerVertice){
+            if(contVertices != 1)
+                primerVertice = primerVertice->getSig();
+            else
+                primerVertice = nullptr;
         }
     }
+
 
     std::cout << "VERTICE " << elemento->getDato() << " ELIMINADO CON EXITO" << std::endl;
     delete elemento;

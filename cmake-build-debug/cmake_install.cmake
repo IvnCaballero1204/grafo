@@ -1,4 +1,4 @@
-# Install script for directory: /home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/grafo
+# Install script for directory: /home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/Actividad 4/grafo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/grafo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/Actividad 4/grafo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,4 +1,3 @@
-#include <iostream>
 #include <fstream>
 #include "grafo.h"
 
@@ -125,13 +124,14 @@ int main() {
                             std::cout << "NO EXISTE VERTICE " << auxOpc << "PARA ELIMINAR" << std::endl;
                     }
 
-                    std::cout << grafo.toString() << std::endl;
                     break;
             }
             contador--;
         }
 
-    } else std::cout << "HUBO UN ERROR AL CONSTRUIR EL GRAFO" << std::endl;
+    }
+    else
+        std::cout << "HUBO UN ERROR AL CONSTRUIR EL GRAFO" << std::endl;
 
     file.close();
 }

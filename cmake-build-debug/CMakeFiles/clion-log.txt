@@ -1,4 +1,4 @@
-/home/ivan/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.7223.86/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/grafo"
+/home/ivan/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.7223.86/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/Actividad 4/grafo"
 -- The C compiler identification is GNU 8.3.0
 -- The CXX compiler identification is GNU 8.3.0
 -- Check for working C compiler: /usr/bin/cc
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/grafo/cmake-build-debug
+-- Build files have been written to: /home/ivan/Documents/UDG/ESTRUCTURAS DE DATOS II/Actividad 4/grafo/cmake-build-debug

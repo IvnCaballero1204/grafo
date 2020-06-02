@@ -38,7 +38,7 @@ public:
 
     Arista* ultimaArista();
     Arista* buscaArista(Vertice* v);
-    Arista* anterior(Arista *e);
+    Arista* anterior(Arista* e);
     Arista* recupera(int indice);
     Arista* operator[](int indice);
 
@@ -60,7 +60,7 @@ public:
     void insertaVertice(std::string& dato);
     void insertaArista(Vertice* v1, Vertice* v2);
     void eliminaVertice(Vertice* elemento);
-    void eliminaArista(std::string &arista);
+    void eliminaArista(std::string& arista);
 
     bool existeArista(std::string& arista);
 
