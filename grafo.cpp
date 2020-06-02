@@ -45,7 +45,6 @@ void Vertice::eliminaArista(Arista* elemento) {
             std::cout << "NO EXISTE ARISTA" << std::endl;
             return;
         }
-
         else
             aristaAnterior->setSig(elemento->getSig());
     }
@@ -63,9 +62,8 @@ void Vertice::setSig(Vertice* vertice) {
 Arista* Vertice::ultimaArista() {
     Arista* aux(primerArista);
 
-    while(aux->getSig()){
+    while(aux->getSig())
         aux = aux->getSig();
-    }
 
     return aux;
 }
@@ -74,9 +72,8 @@ Arista* Vertice::buscaArista(Vertice* v) {
     Arista* aux(primerArista);
 
     while(aux){
-        if(aux->getDato() == v){
+        if(aux->getDato() == v)
             break;
-        }
         aux = aux->getSig();
     }
     return aux;
@@ -100,9 +97,8 @@ Arista* Vertice::recupera(int indice){
     int i = 0;
 
     while(aux){
-        if(i == indice){
+        if(i == indice)
             break;
-        }
         aux = aux->getSig();
         i++;
     }
@@ -114,9 +110,8 @@ Arista* Vertice::operator[](int indice) {
     int i = 0;
 
     while(aux){
-        if(i == indice){
+        if(i == indice)
             break;
-        }
         aux = aux->getSig();
         i++;
     }
@@ -137,9 +132,9 @@ std::string Vertice::getDato() {
 
 std::string Vertice::toString() {
     std::stringstream ss;
+    Arista* aAux(primerArista);
 
     ss << this->getDato();
-    Arista* aAux(primerArista);
 
     while(aAux){
         ss << "->" << aAux->toString();
@@ -194,11 +189,10 @@ void Grafo::insertaVertice(std::string &dato) {
 }
 
 void Grafo::insertaArista(Vertice* v1, Vertice* v2) {
-    if(!v1 || !v2) {
+    if(!v1 || !v2)
         std::cout << "ERROR AL INSERTAR LA ARISTA" << std::endl;
-    } else {
+    else
         v1->insertaArista(v2);
-    }
 }
 
 void Grafo::eliminaVertice(Vertice *elemento) {
@@ -244,7 +238,6 @@ void Grafo::eliminaVertice(Vertice *elemento) {
                 primerVertice = nullptr;
         }
     }
-
 
     std::cout << "VERTICE " << elemento->getDato() << " ELIMINADO CON EXITO" << std::endl;
     delete elemento;
@@ -308,9 +301,9 @@ Vertice* Grafo::recupera(int indice) {
 Vertice* Grafo::ultimoVertice() {
     Vertice* aux(primerVertice);
 
-    while(aux->getSig()){
+    while(aux->getSig())
         aux = aux->getSig();
-    }
+
     return aux;
 }
 
@@ -332,9 +325,8 @@ Vertice* Grafo::operator[](int indice) {
     int i = 0;
 
     while(aux){
-        if(i == indice){
+        if(i == indice)
             break;
-        }
         aux = aux->getSig();
         i++;
     }
