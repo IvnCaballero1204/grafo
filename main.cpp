@@ -120,15 +120,14 @@ int main() {
                         if (grafo.buscaVertice(auxOpc)) {
                             Vertice *vAux = grafo.buscaVertice(auxOpc);
                             grafo.eliminaVertice(vAux);
-                        } else
+                        }
+                        else
                             std::cout << "NO EXISTE VERTICE " << auxOpc << "PARA ELIMINAR" << std::endl;
                     }
-
                     break;
             }
             contador--;
         }
-
     }
     else
         std::cout << "HUBO UN ERROR AL CONSTRUIR EL GRAFO" << std::endl;
